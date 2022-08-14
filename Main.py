@@ -21,11 +21,11 @@ class MyCircularQueue:
         return self.rear
 
     def is_empty(self):
-        if len(self.stack)==0:
+        if len(self.queue)==0:
             return True
 
     def is_full(self):
-        if len(self.stack)==self.size:
+        if len(self.queue)==self.size:
             return True
 
 
