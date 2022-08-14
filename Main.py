@@ -15,13 +15,20 @@ class MyCircularQueue:
         if not self.is_full():
           if self.front == self.rear == (self.size-1):
              self.front == self.rear == -1
-          if self.rear==(self.size-1) and self.queue[0]==0:
+          
+          else:
+            if self.front==self.rear==-1:
+              self.queue.append(value)
+              self.rear+=1
+              self.front+=1
+            else:
+              self.queue.append(value)
+              self.rear+=1
+          return True
+        elif self.is_full():
+            if self.rear==(self.size-1) and self.queue[0]==0:
              self.queue[0]=value
              self.front=0
-          elif self.rear<(self.size-1):
-            self.queue.append(value)
-            self.rear+=1
-          return True
         else:
             return False
 
