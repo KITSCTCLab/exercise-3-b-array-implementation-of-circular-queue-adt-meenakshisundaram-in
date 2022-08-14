@@ -29,6 +29,7 @@ class MyCircularQueue:
             if self.rear==(self.size-1) and self.queue[0]==0:
              self.queue[0]=value
              self.front=0
+             return True
             else:
                 return False
         else:
