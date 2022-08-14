@@ -14,8 +14,8 @@ class MyCircularQueue:
 
     def dequeue(self) -> bool:
         if not self.is_empty():
-           self.queue.pop(0)
            self.front+=1
+           return self.queue.pop(0)
         else:
             return False
 
