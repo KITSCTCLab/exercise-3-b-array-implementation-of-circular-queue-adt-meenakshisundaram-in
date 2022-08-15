@@ -6,10 +6,16 @@ class MyCircularQueue:
         self.front = -1
     
     def get_front(self) -> int:
-        return self.queue[self.front]
+        if self.is_empty():
+            return -1
+        else:
+            return self.queue[self.front]
 
     def get_rear(self):
-        return self.queue[self.rear]
+        if self.is_empty():
+            return -1
+        else:
+            return self.queue[self.rear]
     
     def enqueue(self, value: int) -> bool:
         if not self.is_full():
